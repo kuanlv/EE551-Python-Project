@@ -1,18 +1,86 @@
 # EE551-Python-Project
-Proposal:
-  My project proposal is to build a real estate application using Django framework and Postgres database. 
-  Suppose there is a real estate company and the services of the application are provided by this company and both house sellers and house buyers will need these services. The company can post realtors on this application to recommend to customers. 
+## Introduction:
+This project is about developing a web application which uses django as its framwork and postgresql as database. 
 
-Functionality specification:
-• Manage listings, realtors, contact inquiries and website users via admin
-• Role based users (staff and non-staff)
-• Display listings in app with pagination
-•	Ability to set listings to unpublished
-•	Search listings by keyword, city, state, bedrooms and price (Homepage & search page)
-•	List realtors on about page with “seller of the month” (Control via admin)
-•	Listing page should have a form to submit inquiry for that property listing
-•	Form info should go to database and notify realtor(s) with an email
-•	Frontend register/login to track inquiries
-• etc...
+The application is designed for a real estate company(in this project its called KLre) so the company can post imformation about houses that are avaliable and also information about realtors who are working in this company. So this app is targeted at users who want to buy a house.
 
-An application must have a nice and clean user interface which will require lots of work spent on HTML and CSS, since there are many fancy html templates online so my main focus can be kept on back-end implementations and Python.
+**Reference:** I finished this project by following this [online tutorial](https://www.udemy.com/course/python-django-dev-to-deployment/) 
+
+## How to import the project:
+### Step 0:
+I assumed you have Python3 installed and you know how to setup virtual enviroment.
+
+### Step 1:
+Clone this repo into your local machine and in your terminal type:
+```bash
+cd EE551-Python-Project
+cd DJANGO
+cd project
+```
+Then set up your virtual enviroment
+```bash
+mkvirtualenv env
+```
+```bash
+workon env
+```
+And next you need to install all the dependencies and libaries which I used
+```bash
+pip install -r requirements.txt
+```
+### Step 3: Set up database
+Install [postgresql](https://www.postgresql.org/download/ "click here to install it") if you don't have it. Also install [Pgadmin](https://www.pgadmin.org/download/ "click here to install pgadmin") if you need a user interface for the database.
+
+Next open postgres by clicking the little elephant icon and initailize the database. Then double click the database icon which is called postgres and now your terminal should be opened(not the one in virtual envirament).
+```bash
+The default interactive shell is now zsh.
+To update your account to use zsh, please run `chsh -s /bin/zsh`.
+For more details, please visit https://support.apple.com/kb/HT208050.
+Users-MBP:~ Users$ /Applications/Postgres.app/Contents/Versions/12/bin/psql -p5432 "postgres"
+psql (12.1)
+Type "help" for help.
+
+postgres=# 
+```
+
+
+Now navigate to KLre folder and open settings.py in that folder and on line 82 you should see 
+```python
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'klre',
+        'USER': 'postgres',
+        'PASSWORD': '1023',
+        'HOST': 'localhost'
+    }
+}
+```
+Now swich to terminal and type:
+```bash
+postgres=# \password postgres
+```
+and
+```bash
+postgres=# CREATE DATABASE klre OWNER postgres;
+CREATE DATABASE
+```
+### Step 4:
+In your virtual enviroment type in terminal(make sure you are in project folder):
+```bash
+python manage.py migrate
+```
+Now you can open PgAdmin and check your database that all the tables and fields have already been created.
+
+Then you can start your server by typing
+```bash
+python manage.py runserver
+```
+And if you go to http://localhost:8000 you should see the beautiful UI but without any listing.
+
+### Step 5:
+To make the application offically yours, you need to have access to the admin area.
+
+
+
+
