@@ -7,4 +7,5 @@ db.sqlite3
 /media
 venv
 /static
-.vscode
+.vscode/
+settings.json
