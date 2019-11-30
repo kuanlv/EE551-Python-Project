@@ -14,7 +14,7 @@
     <!--Lightbox-->
     <link rel="stylesheet" href="{% static 'css/lightbox.min.css' % }">
 
-    <title>KL Real Estate</title>
+    <title>KL Real Estate {% block title %} {% endblock %}</title>
 </head>
 <body>
     <!--top bar-->
@@ -26,9 +26,9 @@
     <!--footer-->
     {% include 'partials/_footer.html' %}
       
-    <script src="{ % static 'js/jquery-3.3.1.min.js' % }"></script>
-    <script src="{% static ' js/bootstrap.bundle.min.js' %} "></script>
-    <script src="{% static ' js/lightbox.min.js' %} "></script>
-    <script src="{% static ' js/main.js' % } "></script>
+    <script src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.bundle.min.js' %} "></script>
+    <script src="{% static 'js/lightbox.min.js' %} "></script>
+    <script src="{% static 'js/main.js' %} "></script>
 </body>
 </html>
