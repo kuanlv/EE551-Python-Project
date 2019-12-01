@@ -79,7 +79,16 @@ python manage.py runserver
 And if you go to http://localhost:8000 you should see the beautiful UI but without any listing.
 
 ### Step 5:
-To make the application offically yours, you need to have access to the admin area.
+To make the application officailly yours, you need to have access to the admin area. Go to localhost:8000/admin and you will see a login form. 
+
+In your terminal, stop the server first if it's running by cmd/ctrl + c and type:
+```bash
+python manage.py createsuperuser
+```
+and then give it a username and a password then restart the server. At this point you are all set!
+
+Log in to the admin area and post your first listing there!
+
 
 
 
