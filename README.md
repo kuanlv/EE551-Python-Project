@@ -87,7 +87,7 @@ python manage.py createsuperuser
 ```
 and then give it a username and a password then restart the server. At this point you are all set!
 
-Log in to the admin area and post your first listing there!
+Log in to the admin area and post your first listing and realtor there!
 
 
 
