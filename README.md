@@ -37,7 +37,7 @@ And next you need to install all the dependencies and libaries which I used
 ```bash
 pip install -r requirements.txt
 ```
-### Step 3: Set up database
+### Step 2: Set up database
 Install [postgresql](https://www.postgresql.org/download/ "click here to install it") if you don't have it. Also install [Pgadmin](https://www.pgadmin.org/download/ "click here to install pgadmin") if you need a user interface for the database.
 
 Next open postgres by clicking the little elephant icon and initailize the database. Then double click the database icon which is called postgres and now your terminal should be opened(not the one in virtual envirament).
@@ -74,7 +74,7 @@ and
 postgres=# CREATE DATABASE klre OWNER postgres;
 CREATE DATABASE
 ```
-### Step 4:
+### Step 3:
 In your virtual enviroment type in terminal(make sure you are in project folder):
 ```bash
 python manage.py migrate
@@ -87,7 +87,7 @@ python manage.py runserver
 ```
 And if you go to http://localhost:8000 you should see the beautiful UI but without any listing.
 
-### Step 5:
+### Step 4:
 To make the application officailly yours, you need to have access to the admin area. Go to localhost:8000/admin and you will see a login form. 
 
 In your terminal, stop the server first if it's running by cmd/ctrl + c and type:
