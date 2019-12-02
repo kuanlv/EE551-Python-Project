@@ -4,16 +4,16 @@ This project is about developing a web application which uses django as its fram
 
 The application is designed for a real estate company(in this project its called KLre) so the company can post imformation about houses that are avaliable and also information about realtors who are working in this company. So this app is targeted at users who want to buy a house.
 
+**Note**: This project doesn't include the design of the user interface, so the main focus is on backend.
+
+**Reference:** I finished this project by following this [online tutorial](https://www.udemy.com/course/python-django-dev-to-deployment/) 
+
 ### Folder structure:
 **KLre**: the main application in project.
 
 **accounts, contacts, listings, pages, realtors**: They are all applications.
 
 **templates**: Include all the template html file catagorized by each applications and a base template file.
-
-**Note**: This project doesn't include the design of the user interface, so the main focus is on backend.
-
-**Reference:** I finished this project by following this [online tutorial](https://www.udemy.com/course/python-django-dev-to-deployment/) 
 
 ## How to import the project:
 ### Step 0:
